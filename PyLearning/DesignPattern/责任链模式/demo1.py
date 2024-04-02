@@ -1,4 +1,4 @@
 
 
 def my_test():
-    pass
+    print("hello world")
