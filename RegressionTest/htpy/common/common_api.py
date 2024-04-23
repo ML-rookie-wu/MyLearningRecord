@@ -1,5 +1,5 @@
 import os
-
+import re
 
 
 def get_specified_path(dir_name: str, cur_path: str):
@@ -16,4 +16,15 @@ def get_specified_path(dir_name: str, cur_path: str):
         return None
 
     return get_specified_path(dir_name, os.path.dirname(cur_path))
+
+
+def match_pattern(p, l, n):
+    m = re.match(p, l)
+    if m is not None:
+        result = []
+        for i in range(0, n):
+            result.append(m.group(i+1))
+        return result
+    else:
+        return None
 
