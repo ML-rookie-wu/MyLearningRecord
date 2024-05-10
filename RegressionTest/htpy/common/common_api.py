@@ -1,3 +1,4 @@
+import json
 import os
 import re
 
@@ -27,4 +28,13 @@ def match_pattern(p, l, n):
         return result
     else:
         return None
+
+
+def dump_dict_to_file(dict_data, file_name, indent=4, default=None):
+    with open(file_name, 'w', encoding='utf-8') as f:
+        json.dump(dict_data, f, indent=indent, separators=(',', ':'), ensure_ascii=False, default=default)
+
+
+def load_dict_from_file(file_name):
+    pass
 
