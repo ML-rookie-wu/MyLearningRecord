@@ -46,7 +46,15 @@ class Keil:
 
     @staticmethod
     def load_config_by_project(config_file, project=None):
-        pass
+        config_dict = load_dict_from_file(config_file)
+        filtered_config_dict = {}
+        if project is not None:
+            for proj in config_dict:
+                if proj == project:
+                    filtered_config_dict[proj] = config_dict[proj]
+        for proj in filtered_config_dict:
+            print(proj)
+        return filtered_config_dict
 
     @staticmethod
     def load_template_project(uvprojx_file):
@@ -229,3 +237,16 @@ class Keil:
     @staticmethod
     def programming():
         pass
+
+
+if __name__ == '__main__':
+
+    user = 'btwu'
+    project = 'H2218_ATS_V1'
+    template = 'H2218'
+
+    device = None
+    Keil.device = device
+
+    Keil.update_project(user, project, template)
+    Keil.build()
