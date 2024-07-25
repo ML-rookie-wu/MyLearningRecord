@@ -1,0 +1,24 @@
+{
+  "H2218_ATS_V1": {
+    "工程输出路径": "Project\\Users\\btwu",
+    "宏定义列表": [
+      "H2218",
+      "FEA_WITH_CMSIS",
+      "FEA_WITH_DRIVER",
+      "FEA_WITH_BEFORE_MAIN",
+      "HT633x",
+      "FEA_WITH_DRIVER_API",
+      "FEA_WITH_TEST_DRIVER"
+    ],
+    "文件分组": {
+      "": {},
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    }
+  }
+}
